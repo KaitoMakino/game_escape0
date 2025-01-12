@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#title-screen {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#title-screen img {
+    width: 400px; /* 横幅を400pxに設定 */
+    height: auto; /* アスペクト比を維持 */
+    margin-bottom: 20px; /* 画像とボタンの間に余白を追加 */
+}
+
+#start-button {
+    font-size: 28px; /* ボタンの文字を大きくする */
+    padding: 15px 30px; /* ボタン全体を大きくする */
+    background-color: #f4a261; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    border: none; /* ボタンの境界線を消す */
+    border-radius: 10px; /* ボタンに角丸を追加 */
+    cursor: pointer; /* カーソルをポインタに変更 */
+    transition: transform 0.2s, background-color 0.2s; /* ボタンのアニメーション */
+}
+
+#start-button:hover {
+    background-color: #e76f51; /* ホバー時の色を変更 */
+    transform: scale(1.1); /* ホバー時に少し大きくする */
+}
+
+#intro-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#room-label {
+    margin-bottom: 20px;
+}
+
+#image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#room-image, #floor-plan {
+    width: 45%;
+    height: auto;
+}
+
+.button {
+    margin: 5px;
+}
+
+#inventory {
+    margin-top: 20px;
+}
+
+#inventory-list {
+    list-style-type: none;
+    padding: 0;
+}

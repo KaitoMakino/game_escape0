@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>脱出ゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>謎の館からの脱出</h2>
+    <div id="title-screen">
+        <img src="images/title.png" alt="タイトル画面">
+        <button id="start-button" onclick="startGame()">START</button>
+    </div>
+
+    <div id="game-screen" style="display:none;">
+        <p id="intro-text">目が覚めると古びた館にいた</p>
+        <p id="room-label">あなたは大広間にいます。</p>
+        
+        <div id="image-container">
+            <img id="room-image" src="images/大広間.png" alt="部屋の画像">
+            <img id="floor-plan" src="images/見取図.png" alt="見取図">
+        </div>
+        
+        <div id="buttons">
+            <button class="button" id="entrance-button" onclick="moveToRoom('玄関')">玄関へ</button>
+            <button class="button" id="hall-button" onclick="moveToRoom('大広間')">大広間へ</button>
+            <button class="button" id="library-button" onclick="moveToRoom('図書室')">図書室へ</button>
+            <button class="button" id="kitchen-button" onclick="moveToRoom('キッチン')">キッチンへ</button>
+            <button class="button" id="bathroom-button" onclick="moveToRoom('お風呂場')">お風呂場へ</button>
+            <button class="button" id="toilet-button" onclick="moveToRoom('トイレ（1F）')">トイレ（1F）へ</button>
+            <button class="button" id="staircase-button" onclick="moveToRoom('廊下（2F）')">階段（2F）へ</button>
+            <button class="button" id="bedroom-button" onclick="moveToRoom('寝室')">寝室へ</button>
+            <button class="button" id="kids-room-button" onclick="moveToRoom('こども部屋')">こども部屋へ</button>
+            <button class="button" id="guest-room-button" onclick="moveToRoom('客室')">客室へ</button>
+            <button class="button" id="toilet2f-button" onclick="moveToRoom('トイレ（2F）')">トイレ（2F）へ</button>
+            <button class="button" id="attic-button" onclick="moveToRoom('屋根裏部屋')">屋根裏部屋へ</button>
+            <button class="button" id="basement-button" onclick="moveToRoom('地下室')">地下室へ</button>
+            <button class="button" id="search-button" onclick="searchRoom()">探索</button>
+            <button class="button" id="escape-button" onclick="escape()">脱出</button>
+            <button class="button" id="open-button" onclick="openDoor()">開ける</button>
+            <button class="button" onclick="quitGame()">終了</button>
+        </div>
+
+        <div id="inventory">
+            <h3>アイテム</h3>
+            <ul id="inventory-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
